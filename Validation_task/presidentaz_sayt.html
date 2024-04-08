@@ -1,0 +1,265 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="bgWhite">
+      <div class="row">
+        <b>Hörmətli istifadəçi!</b>
+        <p>Azərbaycan Respublikası Prezidenti cənab İlham Əliyevə və Prezident Administrasiyasına məktub göndərmək ücün
+          aşağıdakı formanı doldurun. Diqqətli olmağınız Sizdən xahiş olunur!</p>
+        <p> (<span style="color:red">* </span>- vacib sahələr) </p>
+        <div class="col-md-4">
+          <label class="form-label">Adınız <span style="color:red">* </span></label>
+          <input id="txtName" type="text" class="form-control">
+          <span class="text-danger">Ad sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Soyadınız <span style="color:red">* </span></label>
+          <input id="txtSurname" type="text" class="form-control">
+          <span class="text-danger">Soyad sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Atanızın adı <span style="color:red">* </span></label>
+          <input id="txtFName" type="text" class="form-control">
+          <span class="text-danger">Ata adı sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-12 mt-3">
+          <label class="form-label">
+            Ölkə <span style="color:red">* </span>
+            <input class="form-check-input" id="checkCountry" type="checkbox">
+            <label class="form-check-label" for="flexCheckChecked">
+              Azərbaycan
+            </label>
+          </label>
+        </div>
+        <div class="col-md-6 dNoneCountry">
+          <label style="visibility: hidden;" class="form-label">.</label>
+          <input id="txtOlke" type="text" class="form-control dNoneCountry">
+          <span class="text-danger">Ölkə sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-6 dNoneCountry">
+          <label class="form-label">Şəhər <span style="color:red">* </span></label>
+          <input id="txtCity" type="text" class="form-control">
+          <span class="text-danger">Şəhər sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="offset-md-4 col-md-4 offset-md-4 mt-3" id="cityVisible">
+          <label class="form-label">Şəhər<span style="color:red">* </span></label>
+          <select id="Acity" class="form-select">
+            <option value="" style="color: red;">-- Siyahıdan seçin --</option>
+            <option value="152">Bakı şəhəri</option>
+            <option value="164">Gəncə şəhəri</option>
+            <option value="172">Xankəndi şəhəri</option>
+            <option value="165">Lənkəran şəhəri</option>
+            <option value="166">Mingəçevir şəhəri</option>
+            <option value="167">Naftalan şəhəri</option>
+            <option value="173">Naxçıvan şəhəri</option>
+            <option value="168">Sumqayıt şəhəri</option>
+            <option value="169">Şəki şəhəri</option>
+            <option value="170">Şirvan şəhəri</option>
+            <option value="171">Yevlax şəhəri</option>
+            <option value="181">Abşeron rayonu</option>
+            <option value="183">Ağcabədi rayonu</option>
+            <option value="182">Ağdam rayonu</option>
+            <option value="184">Ağdaş rayonu</option>
+            <option value="186">Ağstafa rayonu</option>
+            <option value="187">Ağsu rayonu</option>
+            <option value="188">Astara rayonu</option>
+            <option value="189">Balakən rayonu</option>
+            <option value="191">Beyləqan rayonu</option>
+            <option value="190">Bərdə rayonu</option>
+            <option value="192">Biləsuvar rayonu</option>
+            <option value="193">Cəbrayıl rayonu</option>
+            <option value="194">Cəlilabad rayonu</option>
+            <option value="195">Daşkəsən rayonu</option>
+            <option value="196">Füzuli rayonu</option>
+            <option value="197">Gədəbəy rayonu</option>
+            <option value="198">Goranboy rayonu</option>
+            <option value="200">Göyçay rayonu</option>
+            <option value="199">Göygöl rayonu</option>
+            <option value="201">Hacıqabul rayonu</option>
+            <option value="202">Xaçmaz rayonu</option>
+            <option value="203">Xızı rayonu</option>
+            <option value="204">Xocalı rayonu</option>
+            <option value="205">Xocavənd rayonu</option>
+            <option value="206">İmişli rayonu</option>
+            <option value="207">İsmayıllı rayonu</option>
+            <option value="208">Kəlbəcər rayonu</option>
+            <option value="209">Kürdəmir rayonu</option>
+            <option value="210">Qax rayonu</option>
+            <option value="211">Qazax rayonu</option>
+            <option value="212">Qəbələ rayonu</option>
+            <option value="213">Qobustan rayonu</option>
+            <option value="214">Quba rayonu</option>
+            <option value="215">Qubadlı rayonu</option>
+            <option value="216">Qusar rayonu</option>
+            <option value="217">Laçın rayonu</option>
+            <option value="218">Lerik rayonu</option>
+            <option value="219">Masallı rayonu</option>
+            <option value="220">Neftçala rayonu</option>
+            <option value="221">Oğuz rayonu</option>
+            <option value="222">Saatlı rayonu</option>
+            <option value="223">Sabirabad rayonu</option>
+            <option value="224">Samux rayonu</option>
+            <option value="226">Salyan rayonu</option>
+            <option value="225">Siyəzən rayonu</option>
+            <option value="227">Şabran rayonu</option>
+            <option value="228">Şamaxı rayonu</option>
+            <option value="229">Şəmkir rayonu</option>
+            <option value="230">Şuşa rayonu</option>
+            <option value="231">Tərtər rayonu</option>
+            </select>
+            <span class="text-danger">Şəhər sahəsi boş olmamalıdır</span>
+        </div>
+
+        <div class="col-md-12 mt-3">
+          <label class="form-label">Ünvan <span style="color:red">* </span></label>
+          <input id="txtArea" type="text" class="form-control">
+          <span class="text-danger">Ünvan sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label class="form-label">Telefon <span style="color:red">* </span></label>
+          <input id="txtNumber" type="text" class="form-control">
+          <span class="text-danger">Telefon sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label class="form-label">e-Mail <span style="color:red">* </span></label>
+          <input id="txtMail" type="text" class="form-control">
+          <span class="text-danger">Mail sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-3 mt-3">
+          <label class="form-label">Yaşınız <span style="color:red">* </span></label>
+          <input id="txtAge" type="number" class="form-control">
+          <span class="text-danger">Yaş sahəsi boş olmamalıdır</span>
+        </div>
+        
+          <div class="col-md-3 mt-3">
+            <div class="d-flex" >
+              <div class="form-check">
+                <label class="form-label">Cinsiniz <span style="color:red">* </span></label><br>
+                <input class="gender" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Kişi
+                </label>
+              </div>
+              <div class="form-check" style="margin-left: 2rem;">
+                <label class="form-label" style="display: block;"> <span> </span></label><br>
+                <input class="gender" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                <label id="deneme" class="form-check-label" for="flexRadioDefault2">
+                  Qadın
+                </label><br>
+              </div>
+            </div>
+            <span class="text-danger" id="genderValidationMessage">Bu sahə boş olmamalıdır</span>
+          </div>
+        
+     
+        <div class="col-md-6 mt-3">
+          <label class="form-label">Sosial durum <span style="color:red">* </span></label>
+          <select id="txtSosial" class="form-select">
+            <option value="" style="color: red;">-- Siyahıdan seçin --</option>
+            <option value="132">dövlət qulluqçusu</option>
+            <option value="133">qulluqçu</option>
+            <option value="134">elmi işçi</option>
+            <option value="135">təhsil işçisi</option>
+            <option value="136">səhiyyə işçisi</option>
+            <option value="137">mədəniyyət işçisi (yaradıçı şəxs)</option>
+            <option value="138">din xadimi</option>
+            <option value="139">sahibkar</option>
+            <option value="140">özəl sektorun işçisi</option>
+            <option value="141">hərbçi</option>
+            <option value="142">ehtiyyatda olan hərbçi</option>
+            <option value="143">tələbə (şagird)</option>
+            <option value="144">kəndli (fermer)</option>
+            <option value="145">təqaüdçü</option>
+            <option value="146">evdar qadın</option>
+            <option value="147">fəhlə</option>
+            <option value="148">işsiz</option>                           
+          </select>
+          <span class="text-danger">Sosial durum sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label class="form-label">Müraciətin növü <span style="color:red">* </span></label>
+          <div class="d-flex">
+            <div class="form-check">
+              <input class="muraciet" type="radio" name="apply" id="flexRadioDefault1">
+              <span class="text-danger">Bu sahə boş olmamalıdır</span>
+              <label class="form-check-label" for="flexRadioDefault1">
+                Təklif
+              </label>
+            </div>
+            <div class="form-check" style="margin-left: 2rem;">
+              <input class="muraciet" type="radio" name="apply" id="flexRadioDefault2" >
+              <span class="text-danger">Bu sahə boş olmamalıdır</span>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Ərizə
+              </label>
+            </div>
+            <div class="form-check" style="margin-left: 2rem;">
+              <input class="muraciet" type="radio" name="apply" id="flexRadioDefault2">
+              <span class="text-danger">Bu sahə boş olmamalıdır</span>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Şikayət
+              </label>
+            </div>
+          </div>
+          <span class="text-danger" id="MuracietValidationMessage">Bu sahə boş olmamalıdır</span>
+        </div>
+        <div class="col-md-8 mt-3">
+          <label class="form-label">Müraciətin mövzusu <span style="color:red">* </span></label><br><br>
+          <label class="form-label">Əsas mövzu<span style="color:red">* </span></label>
+          <select group_alias="subjects" id="txtMainSubject" class="form-select" target_id="subj_sub">
+            <option value="" style="color: red;">-- Siyahıdan seçin --</option>
+            <option value="6">Qəbul məsələləri</option>
+            <option value="444">Təltif, təqaüd və fəxri adlar məsələləri</option>
+            <option value="445">Vətəndaşlıq və miqrasiya məsələləri</option>
+            <option value="447">Amnistiya və əfv məsələləri</option>
+            <option value="449">İctimai-siyasi məsələlər</option>
+            <option value="454">Dövlət qulluğu və kadr məsələləri</option>
+            <option value="458">İcra hakimiyyəti orqanlarının və bələdiyyələrin fəaliyyəti</option>
+            <option value="461">Xarici siyasət məsələləri</option>
+            <option value="462">Məhkəmə və ədliyyə orqanlarının fəaliyyəti</option>
+            <option value="467">Hüquq mühafizə orqanlarının fəaliyyəti</option>
+            <option value="472">İqtisadi məsələlər</option>
+            <option value="480">Özəlləşdirmə məsələləri</option>
+            <option value="484">Kənd təsərrüfatı məsələləri</option>
+            <option value="490">Torpaq məsələləri</option>
+            <option value="494">Elm və təhsil məsələləri</option>
+            <option value="501">Səhiyyə məsələləri</option>
+            <option value="502">Mədəniyyət və turizm məsələləri</option>
+            <option value="506">Gənclər və idman məsələləri</option>
+            <option value="509">Rabitə və informasiya texnologiyaları məsələləri</option>
+            <option value="510">Nəqliyyat məsələləri</option>
+            <option value="514">Ekologiya və təbii sərvətlər</option>
+            <option value="519">Müdafiə və hərbi xidmət məsələləri</option>
+            <option value="520">Sosial müdafiə məsələləri</option>
+            <option value="527">Mənzil məsələləri</option>
+            <option value="532">Enerji, istilik və su təchizatı məsələləri</option>
+            <option value="537">Tikinti məsələləri</option>
+            <option value="541">Qaçqınlarla və məcburi köçkünlərlə bağlı məsələlər</option>
+            <option value="542">Təbii, texnogen hadisələr və fövqəladə hallar</option>
+            <option value="543">Məişət məsələləri</option>
+            <option value="5483">Minnətdarlıq</option>
+            <option value="5484">Təbrik</option>                           
+          </select>
+          <span class="text-danger">Əsas mövzu sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-12 mt-3">
+          <label class="form-label">Müraciət — <span id="count">500</span> işarə qalıb <span style="color:red">* </span></label>
+          <textarea id="txtApply" class="form-control" cols="30" rows="10"></textarea>
+          <span class="text-danger">Müraciət sahəsi boş olmamalıdır</span>
+        </div>
+        <div class="col-md-12">
+          <button class="btn btn-primary" id="submitBtn">Təsdiq edin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="validation.js"></script>
+</body></html>
